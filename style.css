@@ -47,12 +47,12 @@ h2 {
     top: 0;
     width: 100%;
     background-color: gray;
-    color: white;
+    color: gray;
     text-align: center;
 }
 
 #bottom {
-    position: static;
+    position: relative;
     left: 0;
     top: 0;
     width: 100%;
