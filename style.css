@@ -80,3 +80,11 @@ h2 {
 .text {
     
 }
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
