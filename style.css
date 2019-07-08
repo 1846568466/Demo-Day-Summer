@@ -6,13 +6,10 @@ body {
     background-image: url("https://us.123rf.com/450wm/photoplotnikov/photoplotnikov1803/photoplotnikov180300038/97357324-stock-vector-seamless-pattern-with-fresh-ripe-potatoes-background-with-potatoes-different-shapes-with-brown-point.jpg?ver=6")
 }
 
-#logo {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 #body {
     background-color: white;
-    margin: 60px;
+    margin-left: 300px;
+    margin-right: 300px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 25px;
