@@ -48,9 +48,9 @@ h2 {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: gray;
-    color: gray;
-    text-align: center;
+    background-color: white;
+    color: white;
+    text-align: left;
 }
 
 #bottom {
@@ -82,3 +82,4 @@ h2 {
     
 
 }
+  
