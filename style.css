@@ -48,9 +48,11 @@ h2 {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: white;
-    color: white;
+    background-color: rgba(255, 180, 81, 0.801);
+    color: black;
     text-align: left;
+    font-size: 20px;
+    padding: 10px
 }
 
 #bottom {
@@ -58,7 +60,7 @@ h2 {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 171, 61, 0.801);
     color: black;
     text-align: center;
 }
