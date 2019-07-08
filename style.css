@@ -8,16 +8,22 @@ body {
 
 #body {
     background-color: white;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 25px;
     padding-bottom: 25px;
-    border: 5px solid burlywood;
+    border: 5px solid rgb(145, 101, 50);
+    background: rgba(255, 255, 255, 0.5);
 }
+
 h1 {
-    font-size: 50px;
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 .button {
