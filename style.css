@@ -7,7 +7,6 @@ body {
 }
 
 #body {
-    background-color: white;
     margin-left: 10%;
     margin-right: 10%;
     padding-left: 50px;
@@ -27,11 +26,46 @@ h2 {
 }
 
 .button {
-    font-size: 30px;
     border-radius: 12px;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(145, 101, 50);
+}
+
+.page {
     font-weight: bold;
+    font-size: 30px;
 }
 
 #logo {
     padding-top: 0px;
+}
+
+#top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+#bottom {
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.img {
+    
 }
