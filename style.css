@@ -42,10 +42,6 @@ h2 {
     font-size: 30px;
 }
 
-#logo {
-    padding-top: 0px;
-}
-
 #top {
     position: fixed;
     left: 0;
@@ -65,4 +61,8 @@ h2 {
 
 .img {
     margin-top: 20px;   
+}
+
+.text {
+    font-size: 25px;
 }
