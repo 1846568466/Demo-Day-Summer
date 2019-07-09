@@ -66,6 +66,42 @@ h2 {
 .text {
     font-size: 25px;
 }
-#smallTitle {
+
+.gamebutton {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    box-shadow: 0 10px 0 0 rgb(145, 101, 50);
+    display: block;
+    background: rgba(255, 180, 81, 0.801);
+    color: #eee;
+    padding: 5px 25px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    opacity: 0.9;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 80px;
+    font-size: 50px;
+  }
+  
+  .gamebutton:active {
+    box-shadow: none;
+    top: 10px;
+    margin-bottom: 0;
+  }
+  
+  .gamebutton:hover {
+    opacity: 1;
+  }
+  
+  .gamebutton:active,
+  .gamebutton:focus {
+    outline: 0;
+  }
+
+  #smallTitle {
     font-size: 20px;
 }
