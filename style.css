@@ -75,7 +75,8 @@ h2 {
     box-shadow: 0 10px 0 0 rgb(145, 101, 50);
     display: block;
     background: rgba(255, 180, 81, 0.801);
-    color: #eee;
+    color: black;
+    font-weight: bold;
     padding: 5px 25px;
     border: 0;
     cursor: pointer;
@@ -85,24 +86,24 @@ h2 {
     text-decoration: none;
     width: 80px;
     font-size: 50px;
-  }
+}
   
-  .gamebutton:active {
+.gamebutton:active {
     box-shadow: none;
     top: 10px;
     margin-bottom: 0;
-  }
+}
   
-  .gamebutton:hover {
+.gamebutton:hover {
     opacity: 1;
-  }
+}
   
-  .gamebutton:active,
-  .gamebutton:focus {
+.gamebutton:active,
+.gamebutton:focus {
     outline: 0;
-  }
+}
 
-  #smallTitle {
+#smallTitle {
     font-size: 20px;
 }
 
@@ -116,4 +117,45 @@ h2 {
     border: 5px solid rgb(145, 101, 50);
     background: white;
     width: 65%;
+}
+
+.smallbutton {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    box-shadow: 0 10px 0 0 rgb(145, 101, 50);
+    display: block;
+    background: rgba(255, 180, 81, 0.801);
+    color: black;
+    font-weight: bold;
+    padding: 2.5px 12.5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.9;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 80px
+
+}
+  
+.smallbutton:active {
+    box-shadow: none;
+    top: 10px;
+    margin-bottom: 0;
+}
+  
+.smallbutton:hover {
+    opacity: 1;
+}
+  
+.smallbutton:active,
+.smallbutton:focus {
+    outline: 0;
+}
+
+.gametitle {
+    font-weight: bold;
+    font-size: 30px;
 }
