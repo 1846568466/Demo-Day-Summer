@@ -16,20 +16,23 @@
             <a id="logo" href="index.html"><img src="/img/Logo.png" width="20%"></a>
         </div>
         <div id="body">
-            <h1 id="smallTitle">Potato - Clicker Game</h1>
+            <h1 id="smallTitle">Potato - Clicker Gamec (stress reliving ?)</h1>
             <h2 id="smallTitle">click to earn more potatos</h2>
         </div>
         <br>
         <br>
         <div id="body">
-            <div>Number Of Potatos: XXXX</div>
-            <a>
-                <img src="https://ui-ex.com/images/potato-transparent-cute.png">
-            </a>
-            <!-- this will take to new page (shop) -->
-            <a href="clicker/shop.html" id="shopButton">Shop</a>
-            <a id="upgradeButton">Upgrade</a>
-            <a id="Reset">Reset</a>
+            <div>
+                <h2 id="smallTitle">Number Of Potatoes Colected:</div>
+                <center>
+                    <h1 id="value"></h1>
+                    <button id="add"><img src="https://ui-ex.com/images/potato-transparent-cute.png"></button>
+                </center>
+            <div class="title"> Change Your Potato</div>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
         </div>
         <br>
         <br>
@@ -38,10 +41,21 @@
             <a href="/page1.html" class="button">1</a>
             <a href="/page2.html" class="button">2</a>
             <a href="/page3.html" class="button">3</a>
+            <br>
+            <br>
         </div>
     </center>
-    <script>
-    
+    <script type="text/javascript">
+        // variable store the value of the counter
+        let value = 0
+
+        // header to the initial value
+        document.querySelector('#value').innerHTML = value.toString()
+
+        // handler for the add button
+        document.querySelector('#add').onclick = function () {
+            document.querySelector('#value').innerHTML = value++;
+        }
     </script>
 </body>
 
