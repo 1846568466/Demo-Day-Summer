@@ -35,9 +35,9 @@
         <center>
             <div class="title">Upgrades</div>
         </center>
-        <div class="clickerTag" id="smallTitle">More Potatos Per Click</div>
+        <div class="morePerClick" id="smallTitle">More Potatos Per Click</div>
         <div class="clickerTag" id="smallTitle">Multiplier</div>
-        <div class="clickerTag" id="smallTitle">Auto (Maybe?)</div>
+        <button class="clickerTag" id="smallTitle" onclick="setTimeout(myFunction, 5000);">Auto (Maybe?)</button>
     </div>
     </div>
     </div>
@@ -63,6 +63,14 @@
         // handler for the add button
         document.querySelector('#add').onclick = function () {
             document.querySelector('#value').innerHTML = value++;
+        }
+
+        // upgrade > Auto
+        function myFunction() {
+            document.querySelector('#value').innerHTML = value - 10000;
+            while ('#value' > 0) {
+                document.querySelector('#value').innerHTML = value++;
+            }
         }
     </script>
 </body>
