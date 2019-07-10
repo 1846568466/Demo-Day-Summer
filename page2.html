@@ -23,17 +23,25 @@
         <br>
         <div id="body">
             <div>
-                <h2 id="smallTitle">Number Of Potatoes Colected:</div>
-                <center>
-                    <h1 id="value"></h1>
-                    <button id="add"><img src="https://ui-ex.com/images/potato-transparent-cute.png"></button>
-                </center>
-            <div class="title"> Change Your Potato</div>
-            <a></a>
-            <a></a>
-            <a></a>
-        </div>
-        </div>
+                <h2 id="smallTitle">Number Of Potatoes Colected:
+            </div>
+            <center>
+                <h1 id="value"></h1>
+                <button id="add"><img src="https://ui-ex.com/images/potato-transparent-cute.png"></button>
+            </center>
+    </center>
+    <br>
+    <div id="body">
+        <center>
+            <div class="title">Upgrades</div>
+        </center>
+        <div class="morePerClick" id="smallTitle">More Potatos Per Click</div>
+        <div class="clickerTag" id="smallTitle">Multiplier</div>
+        <button class="clickerTag" id="smallTitle" onclick="setTimeout(myFunction, 5000);">Auto (Maybe?)</button>
+    </div>
+    </div>
+    </div>
+    <center>
         <br>
         <br>
         <div class="page">
@@ -55,6 +63,14 @@
         // handler for the add button
         document.querySelector('#add').onclick = function () {
             document.querySelector('#value').innerHTML = value++;
+        }
+
+        // upgrade > Auto
+        function myFunction() {
+            document.querySelector('#value').innerHTML = value - 10000;
+            while ('#value' > 0) {
+                document.querySelector('#value').innerHTML = value++;
+            }
         }
     </script>
 </body>
