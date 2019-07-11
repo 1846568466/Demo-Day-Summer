@@ -16,8 +16,8 @@
             <a id="logo" href="index.html"><img src="/img/Logo.png" width="20%"></a>
         </div>
         <div id="body">
-            <h1 id="smallTitle">Potato - Clicker Game (stress reliving ?)</h1>
-            <h2 id="smallTitle">click to earn more potatos</h2>
+            <h1 id="">Potato - Clicker Game)</h1>
+            <h2 id="">click to earn more potatos</h2>
         </div>
         <br>
         <br>
@@ -25,67 +25,72 @@
             <div>
                 <h2 id="smallTitle">Number Of Potatoes Colected:
             </div>
+            <h1 id="value"></h1>
+            <div id="clickerButton">
+            <button id="add clickerButton"><img src="https://ui-ex.com/images/potato-transparent-cute.png"></button>
+            </div>
+            <br>
+            <br>
             <center>
-                <h1 id="value"></h1>
-                <button id="add"><img src="https://ui-ex.com/images/potato-transparent-cute.png"></button>
+                <div class="title">Upgrades</div>
+                <br>
+                <button id="morePerClick" class="gamesubtitle smallbutton">x2</button>
+                <br>
+                <button id="invest" class="gamesubtitle smallbutton">+10</button>
+                <br>
+                <button id="auto" class="gamesubtitle smallbutton">Auto</button>
+                <br>
             </center>
-    </center>
-    <br>
-    <div id="body">
-        <center>
-            <div class="title">Upgrades</div>
-            <button class="morePerClick">x2</button>
-            <button id="invest">+10</button>
-            <button id="auto">Auto (Maybe?)</button>
-        </center>
-    </div>
-    </div>
-    </div>
-    <center>
-        <br>
-        <br>
-        <div class="page">
-            <a href="/index.html" class="button">Home</a>
-            <a href="/page1.html" class="button">1</a>
-            <a href="/page2.html" class="button">2</a>
-            <a href="/page3.html" class="button">3</a>
-            <br>
-            <br>
         </div>
-    </center>
-    <script type="text/javascript">
-        // variable store the value of the counter
-        let value = 0
+        </div>
+        </div>
+        <center>
+            <br>
+            <br>
+            <!-- buttons for pages  -->
+            <div class="page">
+                <a href="/index.html" class="button">Home</a>
+                <a href="/page1.html" class="button">1</a>
+                <a href="/page2.html" class="button">2</a>
+                <a href="/page3.html" class="button">3</a>
+                <br>
+                <br>
+            </div>
+        </center>
+        <script type="text/javascript">
 
-        // header to he initial value
-        document.querySelector('#value').innerHTML = value.toString()
+            // variable store the value of the counter
+            let value = 0
 
-        // handler for the add button
-        document.querySelector('#add').onclick = function () {
-            document.querySelector('#value').innerHTML = value++;
-        }
+            // header to he initial value
+            document.querySelector('#value').innerHTML = value.toString()
 
-        //invest
-        document.querySelector('#invest').onclick = function () {
-            if (value >= 10) {
-                setTimeout(function () {
-                    document.querySelector('#value').innerHTML = value + 99;
-                    // this will execute on every 10 seconds only once
-                }, 1000);
+            // handler for the add button
+            document.querySelector('#add').onclick = function () {
+                document.querySelector('#value').innerHTML = value++;
             }
-        }
 
-        //auto every 3 sec
-        document.querySelector('#auto').onclick = function () {
-            if (value >= 100) {
-                document.querySelector('#value').innerHTML = value - 99;
-                window.setInterval(function () {
-                    document.querySelector('#value').innerHTML = value++;
-                }, 3000);
+            //invest
+            document.querySelector('#invest').onclick = function () {
+                if (value >= 10) {
+                    setTimeout(function () {
+                        document.querySelector('#value').innerHTML = value + 99;
+                        // this will execute on every 10 seconds only once
+                    }, 1000);
+                }
             }
-        }
 
-    </script>
+            //auto every 3 sec
+            document.querySelector('#auto').onclick = function () {
+                if (value >= 100) {
+                    document.querySelector('#value').innerHTML = value - 99;
+                    window.setInterval(function () {
+                        document.querySelector('#value').innerHTML = value++;
+                    }, 3000);
+                }
+            }
+
+        </script>
 </body>
 
 </html>
