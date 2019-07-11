@@ -34,10 +34,9 @@
     <div id="body">
         <center>
             <div class="title">Upgrades</div>
-            <button class="morePerClick" id="smallTitle">More Potatos Per Click</button>
-            <br>
-            <button id="invest" id="smallTitle">Invest</button>
-            <button class="clickerTag" id="smallTitle">Auto (Maybe?)</button>
+            <button class="morePerClick">x2</button>
+            <button id="invest">+10</button>
+            <button id="auto">Auto (Maybe?)</button>
         </center>
     </div>
     </div>
@@ -70,16 +69,20 @@
         document.querySelector('#invest').onclick = function () {
             if (value >= 10) {
                 setTimeout(function () {
-                    document.querySelector('#value').innerHTML = value 10;
-                    // this will execute on every 5 seconds only once
-                }, 5000);
+                    document.querySelector('#value').innerHTML = value + 99;
+                    // this will execute on every 10 seconds only once
+                }, 1000);
             }
+        }
 
-            // //auto
-            // window.setInterval(function () {
-            //     document.querySelector('#value').innerHTML = value++;
-            //     // this will execute on every 5 seconds and loop
-            // }, 5000);
+        //auto every 3 sec
+        document.querySelector('#auto').onclick = function () {
+            if (value >= 100) {
+                window.setInterval(function () {
+                    document.querySelector('#value').innerHTML = value++;
+                }, 3000);
+            }
+        }
 
     </script>
 </body>
