@@ -78,6 +78,7 @@
         //auto every 3 sec
         document.querySelector('#auto').onclick = function () {
             if (value >= 100) {
+                document.querySelector('#value').innerHTML = value - 99;
                 window.setInterval(function () {
                     document.querySelector('#value').innerHTML = value++;
                 }, 3000);
