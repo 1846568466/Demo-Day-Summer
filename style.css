@@ -129,14 +129,14 @@ h2 {
     background: rgba(255, 180, 81, 0.801);
     color: black;
     font-weight: bold;
-    padding: 2.5px 12.5px;
+    padding: 5px 25px;
     border: 0;
     cursor: pointer;
     font-size: 20px;
     opacity: 0.9;
     border-radius: 10px;
     text-decoration: none;
-    width: 80px
+    width: 20%;
 
 }
   
