@@ -16,7 +16,7 @@
             <a id="logo" href="index.html"><img src="/img/Logo.png" width="20%"></a>
         </div>
         <div id="body">
-            <h1 id="smallTitle">Potato - Clicker Gamec (stress reliving ?)</h1>
+            <h1 id="smallTitle">Potato - Clicker Game (stress reliving ?)</h1>
             <h2 id="smallTitle">click to earn more potatos</h2>
         </div>
         <br>
@@ -34,10 +34,10 @@
     <div id="body">
         <center>
             <div class="title">Upgrades</div>
+            <button class="morePerClick">x2</button>
+            <button id="invest">+10</button>
+            <button id="auto">Auto (Maybe?)</button>
         </center>
-        <div class="morePerClick" id="smallTitle">More Potatos Per Click</div>
-        <div class="clickerTag" id="smallTitle">Multiplier</div>
-        <button class="clickerTag" id="smallTitle" onclick="setTimeout(myFunction, 5000);">Auto (Maybe?)</button>
     </div>
     </div>
     </div>
@@ -57,7 +57,7 @@
         // variable store the value of the counter
         let value = 0
 
-        // header to the initial value
+        // header to he initial value
         document.querySelector('#value').innerHTML = value.toString()
 
         // handler for the add button
@@ -65,13 +65,25 @@
             document.querySelector('#value').innerHTML = value++;
         }
 
-        // upgrade > Auto
-        function myFunction() {
-            document.querySelector('#value').innerHTML = value - 10000;
-            while ('#value' > 0) {
-                document.querySelector('#value').innerHTML = value++;
+        //invest
+        document.querySelector('#invest').onclick = function () {
+            if (value >= 10) {
+                setTimeout(function () {
+                    document.querySelector('#value').innerHTML = value + 99;
+                    // this will execute on every 10 seconds only once
+                }, 1000);
             }
         }
+
+        //auto every 3 sec
+        document.querySelector('#auto').onclick = function () {
+            if (value >= 100) {
+                window.setInterval(function () {
+                    document.querySelector('#value').innerHTML = value++;
+                }, 3000);
+            }
+        }
+
     </script>
 </body>
 
