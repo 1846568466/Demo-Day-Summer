@@ -168,3 +168,8 @@ h2 {
     font-weight: bold;
     font-size: 15px;
 }
+
+#clickerButton {
+    border: 5px solid rgb(145, 101, 50);
+    width: 47%;
+}
