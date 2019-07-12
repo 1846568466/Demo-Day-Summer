@@ -85,7 +85,6 @@ h2 {
     font-weight: bold;
     padding: 5px 25px;
     border: 0;
-    cursor: pointer;
     font-size: 1.2em;
     opacity: 0.9;
     border-radius: 10px;
@@ -138,7 +137,6 @@ h2 {
     font-weight: bold;
     padding: 5px 25px;
     border: 0;
-    cursor: pointer;
     font-size: 20px;
     opacity: 0.9;
     border-radius: 10px;
@@ -191,4 +189,3 @@ h2 {
     border-radius: 10px;
     font-weight: bold;
 }
-
