@@ -57,15 +57,19 @@ h2 {
 
 .title {
     font-weight: bold;
-    font-size: 50px;   
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
 }
 
 .img {
-    margin-top: 20px;   
+    margin-top: 20px; 
 }
 
 .text {
     font-size: 25px;
+    text-decoration: none;
+    color: black;
 }
 
 .gamebutton {
@@ -175,10 +179,9 @@ h2 {
     padding:5px 30px 30px 30px;
     margin:30px;
     border-radius:5px;
-    /*background-color:#e6e6e6;*/
     text-align:center;
   }
-  
+    /* when button works  */
   .btn-success, .btn-danger {
     width:200px;
     font-size: 25px;
@@ -186,4 +189,5 @@ h2 {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     font-weight: bold;
-  }
+}
+
