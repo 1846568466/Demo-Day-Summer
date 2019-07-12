@@ -105,7 +105,8 @@ h2 {
 }
 
 #smallTitle {
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #game {
@@ -170,7 +171,19 @@ h2 {
     font-size: 15px;
 }
 
-#clickerButton {
+.container {
+    padding:5px 30px 30px 30px;
+    margin:30px;
+    border-radius:5px;
+    /*background-color:#e6e6e6;*/
+    text-align:center;
+  }
+  
+  .btn-success, .btn-danger {
+    width:200px;
+    font-size: 25px;
     border: 5px solid rgb(145, 101, 50);
-    width: 47%;
-}
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    font-weight: bold;
+  }

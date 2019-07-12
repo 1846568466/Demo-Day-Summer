@@ -9,88 +9,150 @@
 
 <body>
     <center>
-        <div id="top">Home > Clicker Game (page 2)</div>
-        <br>
-        <br>
-        <div id="head">
-            <a id="logo" href="index.html"><img src="/img/Logo.png" width="20%"></a>
-        </div>
         <div id="body">
-            <h1 id="">Potato - Clicker Game)</h1>
-            <h2 id="">click to earn more potatos</h2>
-        </div>
-        <br>
-        <br>
-        <div id="body">
-            <div>
-                <h2 id="smallTitle">Number Of Potatoes Colected:
-            </div>
-            <h1 id="value"></h1>
-            <div id="clickerButton">
-            <button id="add clickerButton"><img src="https://ui-ex.com/images/potato-transparent-cute.png"></button>
-            </div>
-            <br>
-            <br>
+        <div class="container">
+            <h1>Potato - Clicker Game!</h1>
+            <button id="click" type="button" class="btn btn-primary btn-lg btn-block"><img src="https://ui-ex.com/images/potato-transparent-cute.png"></button>
+            <hr>
+            <p id="smallTitle">
+                Clicks: <span id="total_clicks">0</span><br />
+                Clicks per <small id="time_period">1.00</small> second: <span id="clicks_per_second">0</span>
+            </p>
             <center>
-                <div class="title">Upgrades</div>
-                <br>
-                <button id="morePerClick" class="gamesubtitle smallbutton">x2</button>
-                <br>
-                <button id="invest" class="gamesubtitle smallbutton">+10</button>
-                <br>
-                <button id="auto" class="gamesubtitle smallbutton">Auto</button>
-                <br>
-            </center>
-        </div>
-        </div>
-        </div>
-        <center>
-            <br>
-            <br>
-            <!-- buttons for pages  -->
-            <div class="page">
-                <a href="/index.html" class="button">Home</a>
-                <a href="/page1.html" class="button">1</a>
-                <a href="/page2.html" class="button">2</a>
-                <a href="/page3.html" class="button">3</a>
-                <br>
-                <br>
-            </div>
+            <h3>Buy</h3>
+            <table class="table">
+                <tr>
+                    <td id="smallTitle">Autoclicker</td>
+                    <td id="smallTitle"><span id="autoclicker_level">lvl 0</span></td>
+                    <td><button id="buy_click" type="button" class="btn btn-success">Buy for 1</button></td>
+                </tr>
+                <tr>
+                    <td id="smallTitle">Speed up by 10%</td>
+                    <td id="smallTitle"><span id="speed_level">lvl 0</span></td>
+                    <td><button id="upgrade_speed" type="button" class="btn btn-success">Buy for 100</button></td>
+                </tr>
+                <tr>
+                    <td id="smallTitle">Increase Clicks Increment</td>
+                    <td></td>
+                    <td><button id="increase_clicks" type="button" class="btn btn-success">Buy for 100</button></td>
+                </tr>
+            </table>
         </center>
-        <script type="text/javascript">
+        </div>
+        <br>
+        <br>
+        </div>
+        <!-- buttons for pages  -->
+        <div class="page">
+            <a href="/index.html" class="button">Home</a>
+            <a href="/page1.html" class="button">1</a>
+            <a href="/page2.html" class="button">2</a>
+            <a href="/page3.html" class="button">3</a>
+            <br>
+            <br>
+            <script type="text/javascript">
+            //variables
+var clicks = 0; //increment this by one every click
+var auto_clicks = 0; //automatically click once per second
+var cost = 1; //the cost of this should increase exponentially
+var upgrade_speed = 0; //the level of the speed up upgrade
+var click_rate = 1000; //ms between each autoclick
+var interval_auto; //storing our interval here so we can update it
+var click_increment = 1; //how many clicks per click
+//functions
 
-            // variable store the value of the counter
-            let value = 0
+function update_total_clicks() { //updates the number of clicks   
+    var e = document.getElementById("total_clicks");
+    e.innerHTML = clicks;
+}
 
-            // header to he initial value
-            document.querySelector('#value').innerHTML = value.toString()
+function buy_something(c, button) {
+    if (clicks < c) {
+        button.className = 'btn btn-danger';
+        setTimeout(function() {
+            var e = document.getElementsByClassName("btn-danger")[0];
+            e.className = 'btn btn-success';
+        }, 1000);
+        return false;
+    }
+    clicks -= c;
+    return true;
+}
 
-            // handler for the add button
-            document.querySelector('#add').onclick = function () {
-                document.querySelector('#value').innerHTML = value++;
-            }
+function update_workers() {
+    var e2 = document.getElementById("time_period");
+    e2.innerHTML = parseFloat(click_rate / 1000.0).toFixed(2);
+    clearInterval(interval_auto);
+    interval_auto = setInterval(function() {
+        clicks += auto_clicks;
+        update_total_clicks();
+    }, click_rate);
+}
+//click events
+document.getElementById("click").onclick = function() {
+    clicks = parseFloat(clicks) + parseFloat(click_increment);
+    update_total_clicks(); //updates the text
+};
+document.getElementById("buy_click").onclick = function() {
+    if (!buy_something(cost, this)) return;
+    auto_clicks++;
+    cost = Math.pow(2, auto_clicks); //new cost
+    update_total_clicks();
+    var e = document.getElementById("clicks_per_second");
+    e.innerHTML = auto_clicks;
+    var e2 = document.getElementById("buy_click");
+    e2.innerHTML = 'Buy for ' + cost;
+    var e2 = document.getElementById("autoclicker_level");
+    e2.innerHTML = 'lvl  ' + auto_clicks;
+};
+document.getElementById("upgrade_speed").onclick = function() {
+    var upgrade_cost = (Math.pow(3, upgrade_speed)) * 100;
+    if (!buy_something(upgrade_cost, this)) return;
+    upgrade_speed++;
+    click_rate = click_rate * 0.90;
+    update_workers();
+    var e2 = document.getElementById("upgrade_speed");
+    e2.innerHTML = 'Buy for ' + ((Math.pow(3, upgrade_speed)) * 100);
+    var e2 = document.getElementById("speed_level");
+    e2.innerHTML = 'lvl  ' + upgrade_speed;
+};
 
-            //invest
-            document.querySelector('#invest').onclick = function () {
-                if (value >= 10) {
-                    setTimeout(function () {
-                        document.querySelector('#value').innerHTML = value + 99;
-                        // this will execute on every 10 seconds only once
-                    }, 1000);
-                }
-            }
+//Increase Click Increment
+document.getElementById("increase_clicks").onclick = function() {
+    var upgrade_cost = (Math.pow(3, click_increment)) * 1;
+    if (!buy_something(upgrade_cost, this)) return;
+    click_increment++;
+    update_workers();
+    var e2 = document.getElementById("click_increment");
+    e2.innerHTML = 'Buy for ' + ((Math.pow(3, click_increment)) * 100);
+};
 
-            //auto every 3 sec
-            document.querySelector('#auto').onclick = function () {
-                if (value >= 100) {
-                    document.querySelector('#value').innerHTML = value - 99;
-                    window.setInterval(function () {
-                        document.querySelector('#value').innerHTML = value++;
-                    }, 3000);
-                }
-            }
+//Start Autoclickers
+update_workers();
 
-        </script>
+function set_cookie(cookie_name, value) {
+    expiry = new Date();
+    expiry.setTime(new Date().getTime() + (10 * 60 * 1000));
+    var c_value = escape(btoa(JSON.stringify(value))) + "; expires=" + expiry.toUTCString();
+    document.cookie = cookie_name + "=" + c_value;
+}
+
+function get_cookie(cookie_name) {
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + cookie_name + "=");
+    if (c_start == -1) {
+        c_start = c_value.indexOf(cookie_name + "=");
+    }
+    if (c_start == -1) return false;
+    c_start = c_value.indexOf("=", c_start) + 1;
+    var c_end = c_value.indexOf(";", c_start);
+    if (c_end == -1) {
+        c_end = c_value.length;
+    }
+    c_value = atob(unescape(c_value.substring(c_start, c_end)));
+    return JSON.parse(c_value);
+}
+            </script>
 </body>
 
 </html>
