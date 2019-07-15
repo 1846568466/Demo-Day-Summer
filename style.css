@@ -193,3 +193,10 @@ h2 {
 .border {
     border: 3px solid rgb(145, 101, 50)
 }
+.comment {
+    width: 70%;
+    font-size: 20px;
+}
+.name {
+    font-size: 20px
+}
