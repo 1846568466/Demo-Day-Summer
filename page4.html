@@ -30,6 +30,17 @@
         <br>
         <br>
         <div id="body">
+            <fieldset>
+                <div class="text">Insert Data</div>
+                <input class="comment" id='inputKey' placeholder="Enter Comment"></input>
+                <input class="name" id='inputValue' placeholder="Enter Name"></input>
+                <button class="smallbutton"id='button'>Comment</button>
+            </fieldset>
+
+            <fieldset>
+                <div class=text> Comments</div>
+                <div id=output>List</div>
+            </fieldset>
         </div>
         <br>
         <br>
@@ -38,14 +49,15 @@
             <a href="page1.html" class="button">1</a>
             <a href="page2.html" class="button">2</a>
             <a href="page3.html" class="button">3</a>
+            <a href="page4.html" class="button">4</a>
+            <br>
         </div>
         <br>
         <br>
     </center>
     <script type="text/javascript">
+
         window.onload = function () {
-
-
             const input = document.getElementById('inputKey')
             const inputValue = document.getElementById('inputValue')
             const output = document.getElementById('output')
@@ -60,14 +72,11 @@
 
 
             }
-
-            const key = localStorage.key(0);
+            //stuff
+            const key = localStorage.key)(            );
             const value = localStorage.getItem(key);
             console.log(key, value)
-            output.innerHTML = key + ': ' + value
-
-
-
+            output.innerHTML = key
         }
     </script>
 </body>
