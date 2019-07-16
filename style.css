@@ -180,8 +180,8 @@ h2 {
     border-radius:5px;
     text-align:center;
   }
-    /* when button works  */
-  .btn-success, .btn-danger {
+
+.btn-success, .btn-danger {
     width:200px;
     font-size: 25px;
     border: 5px solid rgb(145, 101, 50);
@@ -193,10 +193,12 @@ h2 {
 .border {
     border: 3px solid rgb(145, 101, 50)
 }
+
 .comment {
     width: 70%;
     font-size: 20px;
 }
+
 .name {
     font-size: 20px
 }
