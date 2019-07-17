@@ -12,13 +12,13 @@
         <div id="head">
             <a id="logo" href="index.html"><img src="/img/Logo.png" width="15%"></a>
         </div>
-        <div id="top">Home > Clicker Game (page 2)</div>
+        <div id="top">Home > Potato Clicker (page 2)</div>
         <div id="body">
             <div class="container">
-                <h1>Potato - Clicker Game!</h1>
+                <h1>Potato Clicker</h1>
                 <button id="click" type="button" class="btn btn-primary btn-lg btn-block"><img
                         src="https://ui-ex.com/images/potato-transparent-cute.png"></button>
-                <hr>
+                <br>
                 <p id="smallTitle">
                     Potatoes: <span id="total_clicks">0</span><br />
                     Potatoes per <small id="time_period">1.00</small> second: <span id="clicks_per_second">0</span>
@@ -143,6 +143,7 @@
 
                 update_workers();
 
+                //Seconds Of Interval Per Click
                 function set_cookie(cookie_name, value) {
                     expiry = new Date();
                     expiry.setTime(new Date().getTime() + (10 * 60 * 1000));
