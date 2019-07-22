@@ -44,7 +44,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="smallTitle">Increase Clicks Increment +10(can only be bought once)</td>
+                            <td id="smallTitle">Increase Clicks Increment +50(can only be bought once)</td>
                             <td></td>
                             <td><button id="increase_clicks" type="button" class="btn btn-success">Buy for 100</button>
                             </td>
@@ -144,9 +144,9 @@
         //Increase Click Increment
 
         document.getElementById("increase_clicks").onclick = function () {
-            var upgrade_cost = (Math.pow(3, click_increment)) * 1;
+            var upgrade_cost = (Math.pow(3, click_increment)) * 10;
             if (!buy_something(upgrade_cost, this)) return;
-            click_increment = upgrade_speed + 10;
+            click_increment = upgrade_speed + 50;
             update_workers();
             var e2 = document.getElementById("click_increment");
             e2.innerHTML = 'Buy for ' + ((Math.pow(3, click_increment)) * 100);
