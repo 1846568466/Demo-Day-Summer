@@ -44,7 +44,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="smallTitle">Increase Clicks Increment +10(can only be bought once)</td>
+                            <td id="smallTitle">Increase Clicks Increment +50(can only be bought once)</td>
                             <td></td>
                             <td><button id="increase_clicks" type="button" class="btn btn-success">Buy for 100</button>
                             </td>
@@ -53,7 +53,9 @@
                 </center>
             </div>
         </div>
+
         <!-- buttons for pages  -->
+
         <div class="page">
             <br>
             <a href="index.html" class="button">Home</a>
@@ -64,13 +66,11 @@
             <br>
             <br>
     </center>
+
     <script type="text/javascript">
-
-        //storage
-
-        //
-
+    
         //variables
+
         var clicks = 0; //increment this by one every click
         var auto_clicks = 0; //automatically click once per second
         var cost = 1; //the cost of this should increase exponentially
@@ -98,6 +98,8 @@
             clicks -= c;
             return true;
         }
+
+        //start auto if called
 
         function update_workers() {
             var e2 = document.getElementById("time_period");
@@ -144,9 +146,9 @@
         //Increase Click Increment
 
         document.getElementById("increase_clicks").onclick = function () {
-            var upgrade_cost = (Math.pow(3, click_increment)) * 1;
+            var upgrade_cost = (Math.pow(3, click_increment)) * 10;
             if (!buy_something(upgrade_cost, this)) return;
-            click_increment = upgrade_speed + 10;
+            click_increment = upgrade_speed + 50;
             update_workers();
             var e2 = document.getElementById("click_increment");
             e2.innerHTML = 'Buy for ' + ((Math.pow(3, click_increment)) * 100);
