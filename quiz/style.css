@@ -62,30 +62,28 @@ div {
     text-decoration: none;
     cursor: default;
 }
-#green {
-    color: #4caf50;
-}
-.green {
+.brown {
     text-decoration: none;
-    color: #4caf50;
     cursor: default;
+    color: black;
 }
 .invisnum {
-    color: #f0f0f0;
+    color: rgba(228, 192, 119, 0.582);
     text-decoration: none;
     cursor: default;
+    margin-left: 60px;
 }
 .invisnum:hover {
-    color: #4caf50;
+    color: rgb(145, 101, 50);
 }
 .hidden {
     font-size: 250px;
     text-decoration: none;
-    margin-left: 1000px;
-    color: white;
+    margin-left: 800px;
+    color: #EED094;
 }
 .hidden:hover {
-    color: #4caf50;
+    color: rgb(145, 101, 50);
 }
 img {
     border: 3px solid;
