@@ -1,0 +1,93 @@
+body {
+    background-image: url("/quiz/img/potato-background.jpg")
+}
+* {
+    font-family: fantasy;
+}
+h1 {
+    font-size: 100px;
+}
+.button {
+    position: relative;
+    box-shadow: 0 10px 0 0 rgb(145, 101, 50);
+    display: inline-block;
+    background: rgba(255, 180, 81);
+    color: black;
+    padding: 0.5em 1em;
+    border: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    text-decoration: none;
+    width: 130px;
+    height: 50px;
+    font-size:30px;
+    font-weight: bold;
+    margin: 50px;
+}
+.button:active {
+    box-shadow: none;
+    top: 10px;
+    margin-bottom: 0;
+}
+.button:hover {
+    opacity: 1;
+}
+.button:active,
+.button:focus {
+    outline: 0;
+}
+div {
+    font-size: 50px;
+}
+.number {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 180, 81);
+    border-radius: 100%;
+    text-align: center;
+    border: 5px solid rgb(145, 101, 50);
+    color: black;
+    text-decoration: none;
+}
+.fake {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 180, 81);
+    border-radius: 100%;
+    text-align: center;
+    border: 5px solid rgb(145, 101, 50);
+}
+#fake {
+    color: black;
+    text-decoration: none;
+    cursor: default;
+}
+.brown {
+    text-decoration: none;
+    cursor: default;
+    color: black;
+}
+.invisnum {
+    color: rgba(228, 192, 119, 0.582);
+    text-decoration: none;
+    cursor: default;
+    margin-left: 60px;
+}
+.invisnum:hover {
+    color: rgb(145, 101, 50);
+}
+.hidden {
+    font-size: 250px;
+    text-decoration: none;
+    margin-left: 800px;
+    color: #EED094;
+}
+.hidden:hover {
+    color: rgb(145, 101, 50);
+}
+img {
+    border: 3px solid;
+}
+.fail {
+    font-size: 25px;
+}
